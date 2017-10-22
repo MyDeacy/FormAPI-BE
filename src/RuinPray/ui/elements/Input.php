@@ -4,7 +4,7 @@ namespace RuinPray\ui\elements;
 
 class Input extends BaseElement {
 
-  const TYPE = "input"
+  const TYPE = "input";
   public $placeholder = null;
   public $default = null;
 
