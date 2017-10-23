@@ -2,8 +2,9 @@
 namespace sample;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\event\player\PlayerInteractEvent as I;
+use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
+use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\item\Item;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
@@ -16,7 +17,7 @@ class main extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
-	public function onPlayer(I $event){
+	public function onPlayer(PlayerInteractEvent $event){
 		$p = $event->getPlayer();
 		if($p->getInventory()->getItemInHand()->getId() === 339)
 			$form = UI::createCustomForm(1001);
@@ -30,10 +31,10 @@ class main extends PluginBase implements Listener{
 	}
 
 
-	public function onDataPacket(\pocketmine\event\server\DataPacketReceiveEvent $event){
+	public function onDataPacket(DataPacketReceiveEvent $event){
 		$pk = $event->getPacket();
 		$p = $event->getPlayer();
-		if($pk instanceof \pocketmine\network\mcpe\protocol\ModalFormResponsePacket){
+		if($pk instanceof ModalFormResponsePacket){
 			if($pk->formId === 1001){
 				$data = json_decode($pk->formData);
 				var_dump($data);
