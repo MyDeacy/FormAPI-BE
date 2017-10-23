@@ -7,15 +7,11 @@ use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 
 use pocketmine\Player;
 
-use pocketmine\plugin\PluginBase;
-
-use pocketmine\event\Listener;
-
 use RuinPray\ui\forms\CustomForm;
 use RuinPray\ui\forms\SimpleForm;
 use RuinPray\ui\forms\ModalForm;
 
-class UI extends PluginBase implements Listener{
+class UI {
 
 	public static function createCustomForm(Int $id){
 		return new CustomForm($id);
