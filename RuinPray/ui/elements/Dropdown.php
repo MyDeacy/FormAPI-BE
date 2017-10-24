@@ -15,7 +15,7 @@ class Dropdown extends BaseElement {
 	}
 
 	public function defaultOptionIndex($default) : Dropdown {
-		$this->defaultIndex = $default;
+		$this->defaultOptionIndex = $default;
 		return $this;
 	}
 
