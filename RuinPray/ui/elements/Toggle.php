@@ -17,7 +17,7 @@ class Toggle extends BaseElement {
 		return [
 			"type" => self::TYPE,
 			"text" => $this->text,
-			"defaultValue" => $this->defaultValue
+			"defaultValue" => $this->default
 		];
 	}
 }
