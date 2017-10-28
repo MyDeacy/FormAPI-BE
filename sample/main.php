@@ -26,13 +26,12 @@ class main extends PluginBase implements Listener{
 				->steps(["暇", "忙しい！", "なにそれ", "帰ってください"])
 				->defaultIndex("暇")
 			);
-			UI::sendForm($event->getPlayer(), $form);
+			UI::sendForm($p, $form);
 	}
 
 
 	public function onDataPacket(DataPacketReceiveEvent $event){
 		$pk = $event->getPacket();
-		$p = $event->getPlayer();
 		if($pk instanceof ModalFormResponsePacket){
 			if($pk->formId === 1001){
 				$data = json_decode($pk->formData);
