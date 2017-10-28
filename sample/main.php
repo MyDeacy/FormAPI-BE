@@ -22,7 +22,7 @@ class main extends PluginBase implements Listener{
 		if($p->getInventory()->getItemInHand()->getId() === 339)
 			$form = UI::createCustomForm(1001);
 			$form->setTitle("メッセージ送信");
-			$form->addContent((new StepSlider($this))
+			$form->addContent((new StepSlider)
 				->text("今暇?")
 				->steps(["暇", "忙しい！", "なにそれ", "帰ってください"])
 				->defaultIndex("暇")
