@@ -9,20 +9,21 @@ class Dropdown extends BaseElement {
 	public $options; /** @var array */
 	public $defaultOptionIndex = 0;
 
-	public function steps(array $options) : Dropdown {
-		$this->steps = $steps;
+	public function options(array $options) : Dropdown {
+		$this->options = $options;
 		return $this;
 	}
 
 	public function defaultOptionIndex($default) : Dropdown {
-		$this->defaultIndex = $default;
+		$this->defaultOptionIndex = $default;
 		return $this;
 	}
 
 	public function content() : array {
 		return [
 			"type" => self::TYPE,
-			"options" => $this->steps,
+			"text" => $this->text,
+			"options" => $this->options,
 			"defaultOptionIndex" => $this->defaultOptionIndex
 		];
 	}
