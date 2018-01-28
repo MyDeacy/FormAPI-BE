@@ -8,7 +8,7 @@ class Toggle extends BaseElement {
 	public $defaultValue = false;
 
 
-	public function defaultValue(string $default) : Toggle {
+	public function defaultValue(bool $default) : Toggle {
 		$this->defaultValue = $default;
 		return $this;
 	}
