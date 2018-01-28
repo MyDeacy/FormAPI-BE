@@ -5,7 +5,7 @@ namespace RuinPray\ui\elements;
 class Toggle extends BaseElement {
 
 	const TYPE = "toggle";
-	public $defaultValue = false;
+	public $default = false;
 
 
 	public function default(bool $default) : Toggle {

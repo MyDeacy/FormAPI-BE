@@ -8,8 +8,6 @@ class Slider extends BaseElement {
 
 	public $min = 0;
 	public $max = 10:
-	public $steps = 1;
-	public $defaultValue = 0;
 
 	public function min(int $min) : Slider {
 		$this->min = $min;

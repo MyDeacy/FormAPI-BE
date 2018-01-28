@@ -7,7 +7,6 @@ class StepSlider extends BaseElement {
 	const TYPE = "step_slider";
 
 	public $steps; /** @var array */
-	public $defaultIndex = 0;
 
 	public function steps(array $steps) : StepSlider {
 		$this->steps = $steps;
