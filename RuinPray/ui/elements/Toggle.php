@@ -8,8 +8,8 @@ class Toggle extends BaseElement {
 	public $defaultValue = false;
 
 
-	public function defaultValue(bool $default) : Toggle {
-		$this->defaultValue = $default;
+	public function default(bool $default) : Toggle {
+		$this->default = $default;
 		return $this;
 	}
 
@@ -17,7 +17,7 @@ class Toggle extends BaseElement {
 		return [
 			"type" => self::TYPE,
 			"text" => $this->text,
-			"defaultValue" => $this->defaultValue
+			"default" => $this->default
 		];
 	}
 }

@@ -1,9 +1,9 @@
 # SendUIAPI
-今流行りのUI(Window)を簡単に扱えるようになります！  
+Formを簡単に作成、出力を行えるAPIです。
   
   
   
-コード短く、簡単にUIを表示、処理することができます。
+コードを短く、簡単にUIを表示、処理することができます。
 
-詳しい使い方の説明はブログのほうで。  
+詳しい説明はブログのほうで行っています。  
 <http://ruinpray.my-style.in/category/senduiapi-page/>

@@ -14,17 +14,11 @@ class Dropdown extends BaseElement {
 		return $this;
 	}
 
-	public function defaultOptionIndex($default) : Dropdown {
-		$this->defaultOptionIndex = $default;
-		return $this;
-	}
-
 	public function content() : array {
 		return [
 			"type" => self::TYPE,
 			"text" => $this->text,
 			"options" => $this->options,
-			"defaultOptionIndex" => $this->defaultOptionIndex
 		];
 	}
 }
