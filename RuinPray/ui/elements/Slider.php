@@ -7,7 +7,7 @@ class Slider extends BaseElement {
 	const TYPE = "slider";
 
 	public $min = 0;
-	public $max = 10:
+	public $max = 10;
 
 	public function min(int $min) : Slider {
 		$this->min = $min;
